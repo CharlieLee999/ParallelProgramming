@@ -25,7 +25,8 @@ int main( int argc, char *argv[] )
   my_scatter( buffer, size, me, root, 0, nProcs-1 );
 
   printf( "[%d] reveived %d\n", me, buffer[me] );
-
+  
+  free(buffer);
   MPI_Finalize();
   return 0;
 }
