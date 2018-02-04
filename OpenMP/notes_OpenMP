@@ -1,0 +1,8 @@
+1. #pragma omp for MULTIPLE REDUCTION 
+#pragma omp for reduction(+: sum) reduction(+: counter)
+   for(....)
+   {
+      if(...)
+         counter++;
+   }
+   
